@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lanjutan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f9f9f9; 
+            color: #333;
+        }
+
+        header h1 {
+            color: #000000;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            width: 380px;
+            padding: 20px;
+            border: 2px solid #000000;
+            border-radius: 8px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #000000;
+        }
+
+        form p > label {
+            display: inline-block;
+            width: 110px;
+            color: #333;
+        }
+
+        form input[type="text"],
+        form textarea {
+            border: 1px solid #197a43;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .gender-group {
+            display: inline-block;
+        }
+        .gender-group input[type="radio"] {
+            margin-left: 8px;
+        }
+        .gender-group label {
+            margin-right: 12px;
+        }
+
+        form input[type="submit"] {
+            border: 1px solid #197a43;
+            background-color: #197a43;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 7px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        form input[type="submit"]:hover {
+            background-color: #145c33;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Membuat Form</h1>
+    </header>
+
+    <form action="proses.php" method="post">
+        <fieldset>
+            <legend>Data Pelanggan</legend>
+
+            <p>
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama">
+            </p>
+
+            <p>
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" name="alamat" cols="30" rows="3"></textarea>
+            </p>
+
+            <p>
+                <label>Jenis Kelamin:</label>
+                <span class="gender-group">
+                    <input id="jk_l" type="radio" name="kelamin" value="L">
+                    <label for="jk_l">Laki-laki</label>
+
+                    <input id="jk_p" type="radio" name="kelamin" value="P">
+                    <label for="jk_p">Perempuan</label>
+                </span>
+            </p>
+
+            <p>
+                <input type="submit" value="Login">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
