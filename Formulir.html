@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Dropdown & Listbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        header h1 {
+            color: #000000; /* hanya judul hitam */
+            background-color: #00ff80;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        fieldset {
+            width: 420px;
+            margin: 30px auto;
+            padding: 25px 30px;
+            border: 2px solid #00ff80;
+            border-radius: 10px;
+            background-color: #1e1e1e;
+            box-shadow: 0 0 10px rgba(0, 255, 128, 0.3);
+        }
+
+        legend {
+            color: #00ff80;
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        form p {
+            margin-bottom: 18px;
+        }
+
+        form p > label {
+            display: inline-block;
+            width: 140px;
+            color: #ffffff;
+            vertical-align: top;
+        }
+
+        select, textarea, input[type="text"] {
+            border: 1px solid #00ff80;
+            border-radius: 4px;
+            padding: 7px;
+            background-color: #2a2a2a;
+            color: #ffffff;
+            width: 220px;
+        }
+
+        select[multiple] {
+            height: 120px; /* tinggi listbox */
+            overflow-y: scroll; /* aktifkan scroll */
+        }
+
+        select:focus, textarea:focus, input:focus {
+            outline: none;
+            box-shadow: 0 0 6px #00ff80;
+        }
+
+        input[type="submit"] {
+            background-color: #00ff80;
+            color: #000000;
+            font-weight: bold;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 140px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00cc66;
+        }
+
+        small {
+            color: #cccccc;
+            display: block;
+            margin-left: 140px;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Formulir Pendaftaran Kursus</h1>
+    </header>
+
+    <form action="proses.php" method="post">
+        <fieldset>
+            <legend>Data Peserta</legend>
+
+            <p>
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama">
+            </p>
+
+            <p>
+                <label for="jurusan">Pilih Jurusan:</label>
+                <select id="jurusan" name="jurusan">
+                    <option value="">-- Pilih Jurusan --</option>
+                    <option value="informatika">Teknik Informatika</option>
+                    <option value="industri">Teknik Industri</option>
+                    <option value="lingkungan">Teknik Lingkungan</option>
+                    <option value="sipil">Teknik Sipil</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="kursus">Pilih Kursus:</label>
+                <select id="kursus" name="kursus[]" multiple>
+                    <option value="html">HTML Dasar</option>
+                    <option value="css">CSS Lanjutan</option>
+                    <option value="js">JavaScript</option>
+                    <option value="python">Python Pemula</option>
+                    <option value="php">PHP & MySQL</option>
+                    <option value="react">React JS</option>
+                    <option value="nodejs">Node.js</option>
+                    <option value="java">Java Dasar</option>
+                    <option value="csharp">C# Programming</option>
+                    <option value="uiux">UI/UX Design</option>
+                    <option value="data">Data Science</option>
+                    <option value="networking">Jaringan Komputer</option>
+                    <option value="iot">IoT (Internet of Things)</option>
+                    <option value="cyber">Keamanan Siber</option>
+                    <option value="ai">Kecerdasan Buatan (AI)</option>
+                </select>
+            </p>
+
+            <small>Tahan tombol <b>Ctrl</b> (Windows) / <b>Command</b> (Mac) untuk memilih lebih dari satu.</small>
+
+            <p>
+                <input type="submit" value="Kirim">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
