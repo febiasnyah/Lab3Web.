@@ -1,10 +1,16 @@
 # Membuat Ordered List
-
+Pada tahap ini, saya membuat daftar berurutan (ordered list) menggunakan tag < nol > dan < li >.
+Tag < ol > digunakan untuk membuat list bernomor, sedangkan < li > berfungsi untuk menampilkan setiap item dalam daftar.
+Contohnya:
 <img width="1920" height="1080" alt="Cuplikan layar 2025-10-06 134217" src="https://github.com/user-attachments/assets/a1b2842a-cc70-4c6e-901a-fc45c968f9e3" />
+Hasilnya berupa daftar dengan penomoran otomatis dari 1, 2, 3, dan seterusnya.
 
 # Membuat Unorderd List
-
+Selanjutnya, saya membuat daftar tidak berurutan (unordered list) menggunakan tag < ul > dan < li >.
+Berbeda dari ordered list, daftar ini menggunakan simbol (bullet), bukan angka.
+Contohnya:
 <img width="1920" height="1080" alt="Cuplikan layar 2025-10-06 135429" src="https://github.com/user-attachments/assets/ccc7c103-53fb-4cbf-bd6c-cefe18b47f26" />
+List ini cocok untuk menampilkan data yang tidak membutuhkan urutan tertentu.
 
 # Membuat Description List
 
